@@ -66,11 +66,24 @@ public class Gameplay extends JPanel implements  ActionListener, KeyListener {
             ballYdir = 0;
 
             g.setColor(Color.green);
-            g.setFont(new Font("serif", Font.BOLD, 50));
+            g.setFont(new Font("serif", Font.BOLD, 30));
             g.drawString("Game Over!!\n Score : "+ score, 100, 300);
 
-            g.setFont(new Font("serif", Font.BOLD, 35));
-            g.drawString("Press Enter to Restart!!", 250, 250);
+            g.setFont(new Font("serif", Font.BOLD, 25));
+            g.drawString("Press Enter to Restart!!", 250, 350);
+        }
+
+        if(totalBricks <= 0){
+            play = false;
+            ballXdir = 0;
+            ballYdir = 0;
+
+            g.setColor(Color.green);
+            g.setFont(new Font("serif", Font.BOLD, 30));
+            g.drawString("You won!!, Score : "+ score, 100, 300);
+            
+            g.setFont(new Font("serif", Font.BOLD, 25));
+            g.drawString("Press Enter to Restart!!", 250, 350);
         }
     }
 
